@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none">
+    <symbol id="auto" 
+    fill="currentColor">
+    <style>     
+      path{    
+        fill: #000;
+    }
+    
+    @media (prefers-color-scheme: dark) {
+      path{
+        fill: #000;
+      }
+    }
+  </style>
+    <path fill="none" stroke="CurrentColor" stroke-width="3" d="m27.476 2.318 4.833 14.875a3.5 3.5 0 0 0 3.329 2.418h15.64a.5.5 0 0 1 .294.905L38.92 29.71a3.5 3.5 0 0 0-1.272 3.913l4.833 14.875a.5.5 0 0 1-.769.559l-12.654-9.194a3.5 3.5 0 0 0-4.114 0l-12.654 9.194a.5.5 0 0 1-.77-.559l4.834-14.875a3.5 3.5 0 0 0-1.272-3.913L2.428 20.515a.5.5 0 0 1 .294-.904h15.64a3.5 3.5 0 0 0 3.33-2.419l4.832-14.875a.5.5 0 0 1 .951 0Z"/>
+  </symbol>
+</svg>

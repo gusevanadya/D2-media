@@ -1,0 +1,110 @@
+.page {
+  min-inline-size: 320px;
+  min-block-size: 100dvb;
+  width: minmax(375px, 1440px) ;
+  font-family: var(--Inter);
+  font-variation-settings: 'wght' var(--font-weight);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: all ease 0.3s;
+  padding: 10px clamp(0rem, -0.4551rem + 1.9417vw, 1.875rem);
+}
+
+.header {
+  font-family: var(--Inter);
+  font-weight: 400;
+  background-color: var(--bg-color);
+  position: fixed;
+  width: calc(100% - 2 *clamp(0rem, -0.4551rem + 1.9417vw, 1.875rem));
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin-block-end: 104px;
+  border: 2px solid var(--accent-color);
+}
+
+.header__address_link{
+  color: var(--text-color);
+  text-decoration: none;
+  border-block-end: 1px solid var(--text-color);
+  margin-inline-end: 10px;
+}
+
+.header__title {
+  font-size: clamp(0.875rem, 0.6323rem + 1.0356vw, 1.875rem);
+  color: var(--accent-color);
+  justify-self: center;
+}
+
+.header__theme-menu{
+  justify-self: flex-end;
+}
+
+.theme-menu__list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 15px;
+  flex-shrink: 0;
+}
+
+.theme-menu__button {
+  background-color: transparent;
+  inline-size: 100%;
+  block-size: 100%;
+  outline: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  transform-origin: center;
+}
+
+.theme-menu__button:focus-visible {
+  opacity: 0.6;
+  transition: 0.4s;
+}
+
+.theme-menu__button:disabled {
+  pointer-events: none;
+}
+
+.theme-menu__button:disabled .moon{
+  color: #cc4e00;
+}
+
+.theme-menu__button:disabled .auto{
+  color: #cc4e00;
+}
+
+.theme-menu__button:disabled .sun{
+  color: #cc4e00;
+}
+
+.theme-menu__button:hover {
+  cursor: pointer;
+  animation: theme_scale 0.4s;
+}
+
+.footer {
+  background-color: var(--bg-color);
+  margin: 0 clamp(2.125rem, -1.088rem + 13.7089vw, 11.25rem);
+}
+
+
+
+
+.dialog {
+  position: fixed;
+}
+
+dialog::backdrop { 
+  backdrop-filter: brightness(60%);
+}
+
+@media (width <= 376px) {
+  .header{
+    position: relative;
+  }
+}

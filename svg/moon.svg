@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none" class="moon">
+    <symbol id="moon" 
+    fill="currentColor">
+    <style>     
+      path{    
+        fill: #000;
+    }
+    
+    @media (prefers-color-scheme: dark) {
+      path{
+        fill: #000;
+      }
+    }
+  </style>
+    <path fill="none" stroke="CurrentColor" stroke-linejoin="round" stroke-width="3" d="M30.829 44.34a1.5 1.5 0 0 0-.292-2.884 30.224 30.224 0 0 1-.604-.104c-17.307-3.18-23.661-22.984-12.966-37.46a1.5 1.5 0 0 0-1.875-2.235C2.307 8.025-.46 21.258 3.25 31.517c1.856 5.132 5.359 9.62 10.14 12.188 4.816 2.586 10.806 3.153 17.439.634Z"/>
+  </symbol>
+</svg>

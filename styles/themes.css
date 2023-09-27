@@ -1,0 +1,31 @@
+:root.theme-light {
+  --font-weight: 400;
+  --title-font-weight: 700;
+  --bg-color: #fff;
+  --text-color: #000;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --font-weight: 400;
+    --title-font-weight: 700;
+    --bg-color: #fff;
+    --text-color: #000;
+  }
+}
+
+:root.theme-dark {
+    --font-weight: 465;
+    --title-font-weight: 785;
+    --bg-color: #000;
+    --text-color: #fff;
+}
+  
+@media (prefers-color-scheme: dark) {
+    :root {
+      --font-weight: 465;
+      --title-font-weight: 785;
+      --bg-color: #000;
+      --text-color: #fff;
+    }
+}

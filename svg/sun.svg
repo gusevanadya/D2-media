@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="none">
+  <symbol id="sun" 
+    fill="currentColor">
+    <style>     
+      path{    
+        fill: #000;
+    }
+    
+    @media (prefers-color-scheme: dark) {
+      path{
+        fill: #000;
+      }
+    }
+  </style>
+    <circle cx="32" cy="32" r="30.5" fill="none" stroke="CurrentColor" stroke-width="3.5"/>
+  </symbol>
+</svg>

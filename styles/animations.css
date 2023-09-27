@@ -1,0 +1,17 @@
+@keyframes marker {
+    0% {
+      inset-inline-start: -10px;
+    }
+    100% {
+      inset-inline-start: -8px;
+    }
+}
+
+@keyframes theme_scale {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.3);
+  }
+}
