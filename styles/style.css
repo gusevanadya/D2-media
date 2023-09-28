@@ -2,7 +2,7 @@
   font-family: var(--Inter);
   color: var(--text-color);
   font-variation-settings: 'wght' var(--font-weight);
-  background-image: linear-gradient(to bottom, var(--bg-color) 25%, var(--accent-color));
+  background-image: linear-gradient(to bottom, #000 25%, var(--accent-color));
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -26,6 +26,7 @@
   justify-content: space-between;
   padding: 10px;
   border: 2px solid var(--accent-color);
+  border-radius: 10px;
 }
 
 .header__address_link {
@@ -48,12 +49,16 @@
 
 .header__title {
   font-family: var(--Inter);
-  font-size: clamp(0.875rem, 0.6323rem + 1.0356vw, 1.875rem);
+  font-size: 24px;
   font-variation-settings: 'wght' var(--title-font-weight);
   color: var(--accent-color);
   filter: brightness(3);
   justify-self: center;
   pointer-events: none;
+}
+
+:root.theme-light .header__title{
+  filter: brightness(1) drop-shadow(0 0 2px #682174);
 }
 
 .header__theme-menu {
@@ -113,7 +118,8 @@
   justify-self: center;
   align-self: center;
   padding: 10px;
-  border: 2px solid var(--accent-color); 
+  border: 2px solid var(--accent-color);
+  border-radius: 10px;
   outline: 2px solid var(--bg-color); 
   margin: 30px;
   display: grid;
@@ -126,7 +132,9 @@
 .footer {
   background-color: var(--bg-color);
   margin: 0 clamp(2.125rem, -1.088rem + 13.7089vw, 11.25rem);
+  padding: 10px;
   border: 2px solid var(--accent-color); 
+  border-radius: 10px;
   outline: 2px solid var(--bg-color); 
 }
 
