@@ -1,9 +1,9 @@
 :root{
   --Inter: 'Inter', Sans-serif;
-  --PressStart2P: 'PressStart2P', fantasy;
   --font-weight: 400;
-  --title-font-weight: 700;
+  --title-font-weight: 785;
+  --page-bg-color: #432c18;
   --bg-color: #fff;
   --text-color: #000;
-  --accent-color: #cc4e00;
+  --accent-color: #451e5b;
 }   
