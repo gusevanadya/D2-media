@@ -67,22 +67,110 @@
     <main>
       <section class="section section__about_us">
         <h2 class="section__title">About Us</h2>
-        <div>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br></div>
+        <div class="section__about_us__content">
+          <svg class="section__about_us__logo" 
+               viewBox="0 0 100 100">
+            <use href="./svg/logo.svg#logo"></use>
+          </svg>
+          <p>описание</p>
+        </div>
       </section>
       <section class="section section__portfolio">
         <h2 class="section__title">Portfolio</h2>
-        <div>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br></div>
-      </section>
-      <section class="section section__about_us">
-        <div>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br></div>
+        <div class="slider-container">
+          <ul class="portfolio__card-list slider">
+            <li class="portfolio__card-list-item">
+              <button 
+                  class="portfolio__card-list-item__button" 
+                  type="button"
+                  onclick="window['dialog-id'].showModal();"
+                  aria-controls="dialog-id">
+                <img
+                  class="portfolio__card-list-item_img"
+                  src="./images/smile.webp"
+                  alt="..."
+                  loading="lazy"/>
+              </button>
+              <p class="portfolio__card-list-item_text">Описание работы</p>
+            </li>
+            <li class="portfolio__card-list-item">
+              <button 
+                  class="portfolio__card-list-item__button" 
+                  type="button"
+                  onclick="window['dialog-id'].showModal();"
+                  aria-controls="dialog-id">
+                <img
+                  class="portfolio__card-list-item_img"
+                  src="./images/smile.webp"
+                  alt="..."
+                  loading="lazy"/>
+              </button>
+              <p class="portfolio__card-list-item_text">Описание работы</p>
+            </li>
+            <li class="portfolio__card-list-item">
+              <button 
+                  class="portfolio__card-list-item__button" 
+                  type="button"
+                  onclick="window['dialog-id'].showModal();"
+                  aria-controls="dialog-id">
+                <img
+                  class="portfolio__card-list-item_img"
+                  src="./images/smile.webp"
+                  alt="..."
+                  loading="lazy"/>
+              </button>
+              <p class="portfolio__card-list-item_text">Описание работы</p>
+            </li>
+            <li class="portfolio__card-list-item">
+              <button 
+                  class="portfolio__card-list-item__button" 
+                  type="button"
+                  onclick="window['dialog-id'].showModal();"
+                  aria-controls="dialog-id">
+                <img
+                  class="portfolio__card-list-item_img"
+                  src="./images/smile.webp"
+                  alt="..."
+                  loading="lazy"/>
+              </button>
+              <p class="portfolio__card-list-item_text">Описание работы</p>
+            </li>
+            <li class="portfolio__card-list-item">
+              <button 
+                  class="portfolio__card-list-item__button" 
+                  type="button"
+                  onclick="window['dialog-id'].showModal();"
+                  aria-controls="dialog-id">
+                <img
+                  class="portfolio__card-list-item_img"
+                  src="./images/smile.webp"
+                  alt="..."
+                  loading="lazy"/>
+              </button>
+              <p class="portfolio__card-list-item_text">Описание работы</p>
+            </li>
+        </ul>
+        <button class="prev-button" type="button" aria-label="Посмотреть ущё">&lt;</button>
+	      <button class="next-button" type="button" aria-label="Назад">&gt;</button>
+      </div>
       </section>
     </main>
     <footer class="footer">
       <div>ссылки на соцсети?</div>
     </footer>
     <dialog id="dialog-id" class="dialog">
-
+      <button
+          class="dialog__close-button"
+          type="button"
+          onclick="window['dialog-id'].close();">
+      X</button>
+      <img
+        class="portfolio__card-list-item_img"
+        src="./images/smile.webp"
+        alt="..."
+        loading="lazy"/>
     </dialog>
-    <script src="./scripts/like.js"></script>
+    <script src="./scripts/set-theme.js"></script>
+    <script src="scripts/slider.js"></script>
   </body>
 </html>

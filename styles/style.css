@@ -6,7 +6,7 @@
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100vw;
   transition: all ease 0.3s;
   min-inline-size: 320px;
   min-block-size: 100dvb;
@@ -114,7 +114,7 @@
   font-family: var(--Inter);
   font-weight: 400;
   background-color: var(--bg-color); 
-  width: calc(100% - 60px);
+  inline-size: calc(100% - 60px);
   justify-self: center;
   align-self: center;
   padding: 10px;
@@ -122,11 +122,106 @@
   border-radius: 10px;
   outline: 2px solid var(--bg-color); 
   margin: 30px;
-  display: grid;
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .section:first-child{
   margin-block-start: 80px;
+}
+
+.section__about_us .section__title{
+  margin-block-end: 15px;
+}
+
+.section__about_us__content{
+  align-self: flex-start;
+  display: grid;
+  grid-template-columns: 100px auto;
+  gap: 10px;
+}
+
+.section__about_us__logo{
+  inline-size: 100px;
+  block-size: 100px;
+}
+
+.slider-container {
+  position: relative;
+  inline-size: 100%;
+  block-size: 420px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.prev-button,
+.next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-1%);
+  font-size: 36px;
+  inline-size: 50px;
+  block-size: 50px;
+  color: var(--bg-color);
+  background-color: var(--text-color);
+  border-radius: 50px;
+  opacity: 0.5;
+}
+
+.next-button {
+  right: 0px;
+}
+
+.portfolio__card-list{
+  list-style: none;
+  block-size: 400px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: start;
+  align-items: center;
+  margin-block-start: 20px;
+}
+
+.portfolio__card-list-item{
+  color: var(--text-color);
+  background-color: var(--accent-color);
+  inline-size: 300px;
+  block-size: 400px;
+  border: 2px solid var(--accent-color);
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.portfolio__card-list-item:hover .portfolio__card-list-item_img {
+  transform-origin: center;
+  scale: 1.2;
+}
+
+.portfolio__card-list-item__button{
+  background-color: transparent;
+  border: none;
+}
+
+.portfolio__card-list-item_img {
+  inline-size: 100%;
+}
+
+.portfolio__card-list-item_text {
+  inline-size: 100%;
 }
 
 .footer {
@@ -142,11 +237,26 @@
 
 
 .dialog {
+  background-color: var(--bg-color);
   position: fixed;
+  border: 2px solid var(--accent-color);
+  border-radius: 10px;
 }
 
 dialog::backdrop { 
-  backdrop-filter: brightness(60%);
+  backdrop-filter: brightness(50%);
+}
+
+.dialog__close-button{
+  position: absolute;
+  inset-inline-end: 1px;
+  inset-block-start: 1px;
+  inline-size: 30px;
+  block-size: 30px;
+  background-color: var(--accent-color);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
 }
 
 @media (width <= 376px) {
@@ -154,10 +264,20 @@ dialog::backdrop {
     margin-block-end: 15px;
   }
 
-  .section{
+  .section {
     width: calc(100% - 20px);
     padding: 10px;
     border: 2px solid var(--accent-color); 
-    margin: 10px;
+    margin: 20px 10px;
+  }
+
+  .portfolio__card-list {
+    flex-direction: column;
+    padding-inline-start: 15px;
+    gap: 32px;
+  }
+
+  .portfolio__card-list-item {
+    padding: 10px;
   }
 }
