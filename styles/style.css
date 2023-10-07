@@ -2,7 +2,7 @@
   font-family: var(--Inter);
   color: var(--text-color);
   font-variation-settings: 'wght' var(--font-weight);
-  background-image: linear-gradient(to bottom, #000 25%, var(--accent-color));
+  background-image: var(--bg-image);
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -25,7 +25,6 @@
   align-items: center;
   justify-content: space-between;
   padding: 10px;
-  border: 2px solid var(--accent-color);
   border-radius: 10px;
 }
 
@@ -47,12 +46,8 @@
   transition: 0.4s;
 }
 
-.header__title {
-  font-family: var(--Inter);
-  font-size: 24px;
-  font-variation-settings: 'wght' var(--title-font-weight);
-  color: var(--accent-color);
-  filter: brightness(3);
+.header__logo {
+  inline-size: 100px;
   justify-self: center;
   pointer-events: none;
 }
@@ -118,9 +113,7 @@
   justify-self: center;
   align-self: center;
   padding: 10px;
-  border: 2px solid var(--accent-color);
-  border-radius: 10px;
-  outline: 2px solid var(--bg-color); 
+  border-radius: 10px; 
   margin: 30px;
   padding: 35px;
   display: flex;
@@ -193,11 +186,15 @@
 }
 
 .portfolio__card-list-item{
-  color: var(--text-color);
-  background-color: var(--accent-color);
+  color: #fff;
+  background-color: var(--card-bg-color);
+  background-image: var(--card-bg-image);
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100vw;
   inline-size: 300px;
   block-size: 400px;
-  border: 2px solid var(--accent-color);
   border-radius: 10px;
   padding: 15px;
   display: flex;
@@ -228,9 +225,7 @@
   background-color: var(--bg-color);
   margin: 0 clamp(2.125rem, -1.088rem + 13.7089vw, 11.25rem);
   padding: 10px;
-  border: 2px solid var(--accent-color); 
   border-radius: 10px;
-  outline: 2px solid var(--bg-color); 
 }
 
 

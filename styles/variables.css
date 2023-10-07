@@ -2,8 +2,11 @@
   --Inter: 'Inter', Sans-serif;
   --font-weight: 400;
   --title-font-weight: 785;
-  --page-bg-color: #432c18;
-  --bg-color: #fff;
+  --page-bg-color: #adadad;
+  --bg-color: #ededed;
   --text-color: #000;
-  --accent-color: #451e5b;
+  --accent-color: #542e6a;
+  --bg-image: linear-gradient(to bottom, #000 25%, var(--accent-color));
+  --card-bg-color: #cccccc;
+  --card-bg-image: linear-gradient(to bottom, transparent 75%, var(--accent-color));
 }   
