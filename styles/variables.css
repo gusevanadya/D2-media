@@ -6,7 +6,7 @@
   --bg-color: #ededed;
   --text-color: #000;
   --accent-color: #542e6a;
-  --bg-image: linear-gradient(to bottom, #000 25%, var(--accent-color));
+  --bg-image: linear-gradient(to bottom, #c6c6c6 25%, var(--accent-color));
   --card-bg-color: #cccccc;
   --card-bg-image: linear-gradient(to bottom, transparent 75%, var(--accent-color));
 }   

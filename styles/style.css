@@ -7,7 +7,7 @@
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: 100vw;
-  transition: all ease 0.3s;
+  transition: all ease-in 0.3s;
   min-inline-size: 320px;
   min-block-size: 100dvb;
   width: minmax(375px, 1440px) ;
@@ -52,7 +52,7 @@
   pointer-events: none;
 }
 
-:root.theme-light .header__title{
+:root.theme-light .header__title {
   filter: brightness(1) drop-shadow(0 0 2px #682174);
 }
 
@@ -105,7 +105,7 @@
   animation: theme_scale 0.4s;
 }
 
-.section{
+.section {
   font-family: var(--Inter);
   font-weight: 400;
   background-color: var(--bg-color); 
@@ -122,24 +122,40 @@
   align-items: center;
 }
 
-.section:first-child{
+.section__about_us {
+  margin-block-start: 80px;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
   margin-block-start: 80px;
 }
 
-.section__about_us .section__title{
+.section__about_us .section {
+  margin: 0;
+}
+
+.section__about_us__logo {
+  inline-size: clamp(4.6875rem, -0.2641rem + 21.1268vw, 18.75rem);
+  block-size: clamp(4.6875rem, -0.2641rem + 21.1268vw, 18.75rem);
+  color: #fff;
+  background-color: var(--bg-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline-start: 20px;
+}
+
+.logo {
+  inline-size: clamp(3.125rem, -0.1761rem + 14.0845vw, 12.5rem);
+  block-size: clamp(3.125rem, -0.1761rem + 14.0845vw, 12.5rem);
+  color: var(--text-color);
+}
+
+.section__about_us .section__title {
   margin-block-end: 15px;
-}
-
-.section__about_us__content{
-  align-self: flex-start;
-  display: grid;
-  grid-template-columns: 100px auto;
-  gap: 10px;
-}
-
-.section__about_us__logo{
-  inline-size: 100px;
-  block-size: 100px;
 }
 
 .slider-container {
@@ -228,9 +244,6 @@
   border-radius: 10px;
 }
 
-
-
-
 .dialog {
   background-color: var(--bg-color);
   position: fixed;
@@ -262,8 +275,23 @@ dialog::backdrop {
   .section {
     width: calc(100% - 20px);
     padding: 10px;
-    border: 2px solid var(--accent-color); 
     margin: 20px 10px;
+  }
+
+  .section__about_us {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section__about_us__logo {
+    margin-inline-start: 10px;
+    inline-size: 50vw;
+    block-size: 50vw;
+  }
+
+  .logo {
+    inline-size: 25vw;
+    block-size: 25vw;
   }
 
   .portfolio__card-list {

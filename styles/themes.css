@@ -3,6 +3,7 @@
   --title-font-weight: 700;
   --bg-color: #ededed;
   --text-color: #000;
+  --bg-image: linear-gradient(to bottom, #c6c6c6 25%, var(--accent-color));
   --card-bg-color: #cccccc;
   --card-bg-image: linear-gradient(to bottom, transparent 75%, var(--accent-color));
 
@@ -14,6 +15,7 @@
     --title-font-weight: 700;
     --bg-color: #ededed;
     --text-color: #000;
+    --bg-image: linear-gradient(to bottom, #c6c6c6 25%, var(--accent-color));
     --card-bg-color: #cccccc;
     --card-bg-image: linear-gradient(to bottom, transparent 75%, var(--accent-color));
   }
@@ -33,7 +35,7 @@
     :root {
       --font-weight: 465;
       --title-font-weight: 785;
-      --bg-color: #000;
+      --bg-color: #101010;
       --text-color: #fff;
       --bg-image: linear-gradient(to bottom, #000 45%, var(--accent-color));
       --card-bg-color: #2b2a2a;
