@@ -11,7 +11,7 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   width: minmax(375px, 1440px) ;
-  padding: 10px clamp(0rem, -0.4551rem + 1.9417vw, 1.875rem);
+  padding: 2.5vw clamp(0rem, -0.4551rem + 1.9417vw, 1.875rem);
 }
 
 .header {
@@ -19,34 +19,17 @@
   font-weight: 400;
   background-color: var(--bg-color);
   position: fixed;
-  width: calc(100% - 2 *clamp(0rem, -0.4551rem + 1.9417vw, 1.875rem));
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  inset-inline-end: 10px;
+  inline-size: 35px;
+  display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 10px;
+  justify-content: center;
+  padding: 5px;
+  margin-block-start: 1vw;
   border-radius: 10px;
 }
 
-.header__address_link {
-  color: var(--text-color);
-  font-size: 12px;
-  text-decoration: none;
-  border-block-end: 1px solid var(--text-color);
-  margin-inline-end: 10px;
-}
-
-.header__address_link:focus {
-  outline: none;
-}
-
-.header__address_link:focus-visible {
-  border: 1px solid var(--text-color);
-  opacity: 0.6;
-  transition: 0.4s;
-}
-
-.header__logo {
+/*.header__logo {
   inline-size: 100px;
   justify-self: center;
   pointer-events: none;
@@ -54,17 +37,13 @@
 
 :root.theme-light .header__title {
   filter: brightness(1) drop-shadow(0 0 2px #682174);
-}
-
-.header__theme-menu {
-  justify-self: flex-end;
-}
+}*/
 
 .theme-menu__list {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(3, auto);
-  gap: 15px;
+  grid-template-rows: repeat(3, auto);
+  gap: 5px;
   flex-shrink: 0;
 }
 
@@ -105,6 +84,14 @@
   animation: theme_scale 0.4s;
 }
 
+.section__about_us {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  margin-block-start: 15px;
+  align-items: flex-start;
+  justify-content: center;
+}
+
 .section {
   font-family: var(--Inter);
   font-weight: 400;
@@ -122,18 +109,9 @@
   align-items: center;
 }
 
-.section__about_us {
-  margin-block-start: 80px;
-  display: grid;
-  grid-template-columns: 1fr 4fr;
-  gap: 30px;
-  justify-content: center;
-  align-items: center;
-  margin-block-start: 80px;
-}
-
 .section__about_us .section {
-  margin: 0;
+  margin: 0px;
+  align-self: start;
 }
 
 .section__about_us__logo {
@@ -175,18 +153,23 @@
 .next-button {
   position: absolute;
   top: 50%;
-  transform: translateY(-1%);
-  font-size: 36px;
-  inline-size: 50px;
-  block-size: 50px;
+  transform: translateY(-50%);
+  font-size: 24px;
+  inline-size: 5vh;
+  block-size: 5vh;
   color: var(--bg-color);
   background-color: var(--text-color);
-  border-radius: 50px;
-  opacity: 0.5;
+  border-radius: 30px;
+  border: none;
+  opacity: 0.3;
+}
+
+.prev-button {
+  left: 1vw;
 }
 
 .next-button {
-  right: 0px;
+  right: 1vw;
 }
 
 .portfolio__card-list{
@@ -195,14 +178,14 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 2vw;
   justify-content: start;
   align-items: center;
   margin-block-start: 20px;
 }
 
 .portfolio__card-list-item{
-  color: #fff;
+  color: var(--text-color);
   background-color: var(--card-bg-color);
   background-image: var(--card-bg-image);
   background-position: center;
@@ -242,6 +225,31 @@
   margin: 0 clamp(2.125rem, -1.088rem + 13.7089vw, 11.25rem);
   padding: 10px;
   border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+}
+
+.footer__address{
+  display: flex;
+  flex-direction: row;
+}
+
+.footer__address_link {
+  color: var(--text-color);
+  font-size: 12px;
+  text-decoration: none;
+  border-block-end: 1px solid var(--text-color);
+  margin-inline-end: 10px;
+}
+
+.footer__address_link:focus {
+  outline: none;
+}
+
+.footer__address_link:focus-visible {
+  border: 1px solid var(--text-color);
+  opacity: 0.6;
+  transition: 0.4s;
 }
 
 .dialog {
@@ -267,13 +275,9 @@ dialog::backdrop {
   border-radius: 50px;
 }
 
-@media (width <= 376px) {
-  .header {
-    margin-block-end: 15px;
-  }
-
+@media (width <= 576px) {
   .section {
-    width: calc(100% - 20px);
+    inline-size: calc(100% - 20px);
     padding: 10px;
     margin: 20px 10px;
   }
@@ -281,12 +285,18 @@ dialog::backdrop {
   .section__about_us {
     display: flex;
     flex-direction: column;
+    gap: 30px;
+  }
+
+  .section__about_us .section {
+    align-self: center;
   }
 
   .section__about_us__logo {
     margin-inline-start: 10px;
     inline-size: 50vw;
     block-size: 50vw;
+    align-self: center;
   }
 
   .logo {
@@ -295,12 +305,14 @@ dialog::backdrop {
   }
 
   .portfolio__card-list {
-    flex-direction: column;
-    padding-inline-start: 15px;
-    gap: 32px;
+    padding-inline-start: 5vw;
   }
 
   .portfolio__card-list-item {
     padding: 10px;
+  }
+
+  .footer__address{
+    flex-direction: column;
   }
 }

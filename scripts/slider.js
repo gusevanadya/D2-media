@@ -2,7 +2,7 @@ const slider = document.querySelector('.slider');
 const prevButton = document.querySelector('.prev-button');
 const nextButton = document.querySelector('.next-button');
 const slides = Array.from(slider.querySelectorAll('img'));
-const slideCount = slides.length;
+const slideCount = (slides.length * 300) % innerWidth;
 let slideIndex = 0;
 
 prevButton.addEventListener('click', () => {
