@@ -1,26 +1,39 @@
-const slider = document.querySelector('.slider');
-const prevButton = document.querySelector('.prev-button');
-const nextButton = document.querySelector('.next-button');
-const slides = Array.from(slider.querySelectorAll('img'));
-const slideCount = (slides.length * 300) % innerWidth;
-let slideIndex = 0;
+const images = document.querySelectorAll('.slider .slider-line img');
+const sliderLine = document.querySelector('.slider .slider-line');
+let count = 0;
+let width;
 
-prevButton.addEventListener('click', () => {
-  slideIndex = (slideIndex - 1 + slideCount) % slideCount;
-  slide();
-});
-
-nextButton.addEventListener('click', () => {
-  slideIndex = (slideIndex + 1) % slideCount;
-  slide();
-});
-
-const slide = () => {
-  const imageWidth = slider.clientWidth;
-  const slideOffset = -slideIndex * imageWidth;
-  slider.style.transform = `translateX(${slideOffset}px)`;
+function init() {
+    console.log('resize');
+    width = document.querySelector('.slider').offsetWidth;
+    sliderLine.style.width = width * images.length + 'px';
+    images.forEach(item => {
+        item.style.width = width + 'px';
+        item.style.height = 'auto';
+    });
+    rollSlider();
 }
 
-window.addEventListener('load', () => {
-  slide();
+init();
+window.addEventListener('resize', init);
+
+document.querySelector('.slider-next').addEventListener('click', function () {
+    count++;
+    if (count >= images.length) {
+        count = 0;
+    }
+    rollSlider();
 });
+
+document.querySelector('.slider-prev').addEventListener('click', function () {
+    count--;
+    if (count < 0) {
+        count = images.length - 1;
+    }
+    rollSlider();
+});
+
+function rollSlider() {
+    sliderLine.style.transform = 'translate(-' + count * width + 'px)';
+
+}
