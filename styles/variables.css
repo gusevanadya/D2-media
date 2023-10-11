@@ -1,12 +1,9 @@
 :root{
   --Inter: 'Inter', Sans-serif;
   --font-weight: 400;
-  --title-font-weight: 785;
+  --titlefont-weight: 300;
   --page-bg-color: #adadad;
-  --bg-color: #ededed;
+  --bg-color: #fff;
   --text-color: #000;
-  --accent-color: #542e6a;
-  --bg-image: linear-gradient(to bottom, #c6c6c6 25%, var(--accent-color));
-  --card-bg-color: #cccccc;
-  --card-bg-image: linear-gradient(to bottom, transparent 75%, var(--accent-color));
+  --accent-color: red;
 }   

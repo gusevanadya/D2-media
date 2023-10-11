@@ -1,13 +1,13 @@
-@keyframes marker {
-    0% {
-      inset-inline-start: -10px;
-    }
-    100% {
-      inset-inline-start: -8px;
-    }
+@keyframes marquee_motion {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
-@keyframes theme_scale {
+@keyframes scale {
   0% {
     transform: scale(1);
   }

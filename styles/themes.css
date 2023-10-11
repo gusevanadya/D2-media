@@ -1,23 +1,16 @@
 :root.theme-light {
   --font-weight: 400;
   --title-font-weight: 700;
-  --bg-color: #ededed;
+  --bg-color: #fff;
   --text-color: #000;
-  --bg-image: linear-gradient(to bottom, #c6c6c6 25%, var(--accent-color));
-  --card-bg-color: #cccccc;
-  --card-bg-image: linear-gradient(to bottom, #cccccc 75%, var(--accent-color));
-
 }
 
 @media (prefers-color-scheme: light) {
   :root {
     --font-weight: 400;
     --title-font-weight: 700;
-    --bg-color: #ededed;
+    --bg-color: #fff;
     --text-color: #000;
-    --bg-image: linear-gradient(to bottom, #c6c6c6 25%, var(--accent-color));
-    --card-bg-color: #cccccc;
-    --card-bg-image: linear-gradient(to bottom, #cccccc 75%, var(--accent-color));
   }
 }
 
@@ -26,9 +19,6 @@
     --title-font-weight: 785;
     --bg-color: #101010;
     --text-color: #fff;
-    --bg-image: linear-gradient(to bottom, #020202 45%, var(--accent-color));
-    --card-bg-color: #2b2a2a;
-    --card-bg-image: linear-gradient(to bottom, transparent 75%, var(--accent-color));
 }
   
 @media (prefers-color-scheme: dark) {
@@ -37,8 +27,5 @@
       --title-font-weight: 785;
       --bg-color: #101010;
       --text-color: #fff;
-      --bg-image: linear-gradient(to bottom, #000 45%, var(--accent-color));
-      --card-bg-color: #2b2a2a;
-      --card-bg-image: linear-gradient(to bottom, transparent 75%, var(--accent-color));
     }
 }

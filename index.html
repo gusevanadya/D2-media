@@ -18,11 +18,42 @@
   </head>
   <body class="page">
     <header class="header">
-      <!--<svg class="header__logo" viewBox="0 0 127 28">
-        <use href="./svg/header_logo.svg#header_logo"></use>
-      </svg>-->
-        <h1 class="header__title" hidden>D2 media</h1>
-      <nav class="theme-menu header__theme-menu">
+      <div class="header__logo">
+        <svg class="header__logo-d2"
+             width="75" 
+             height="45"
+             viewBox="0 0 75 45">
+          <use href="./svg/D2.svg#d2"></use>
+        </svg>
+        <svg class="header__logo-media" 
+           width="88" 
+           height="25" 
+           viewBox="0 0 88 25">
+          <use href="./svg/media.svg#media"></use>
+        </svg>
+    </div>
+      <address class="header__address">
+        <a class="header__address_link" href="mailto:info@d2media.ru">info@d2media.ru</a>
+        <a class="header__address_link" href="mailto:web@d2media.ru">web@d2media.ru</a>
+        <a class="header__address_link phone" href="tel:89015048020">8 901 504 80 20</a>
+        <a href=" https://t.me/+79015048020">
+          <svg class="icon" 
+               width="40" 
+               height="40" 
+               viewBox="0 0 453 445">
+            <use href="./svg/tg.svg#tg"></use>
+          </svg>
+        </a>
+        <a href="https://wa.me/89015048020">
+          <svg class="icon" 
+               width="40" 
+               height="40" 
+               viewBox="0 0 682 682">
+            <use href="./svg/whatsapp.svg#wa"></use>
+          </svg>
+        </a>
+      </address>
+      <nav class="header__theme-menu">
         <ul class="theme-menu__list">
           <li class="theme-menu__item">
             <button type="button" data-theme="dark" class="theme-menu__button">
@@ -41,12 +72,12 @@
               disabled
               class="theme-menu__button"
             >
-            <svg class="sun" 
+            <svg class="auto" 
                    width="20" 
                    height="20" 
                    viewBox="0 0 54 54">
-         <use href="./svg/auto.svg#auto"></use>
-       </svg>
+              <use href="./svg/auto.svg#auto"></use>
+            </svg>
             </button>
           </li>
           <li class="theme-menu__item">
@@ -63,154 +94,49 @@
       </nav>
     </header>
     <main>
-      <section class="section__about_us">
-        <div class="section__about_us__logo">
-          <svg class="logo" 
-              viewBox="0 0 75 75">
-            <use href="./svg/logo.svg#logo"></use>
-          </svg>
-        </div>
-        <div class="section">
-          <h2 class="section__title">About Us</h2>
-          <p>описание<br><br><br><br><br><br></p>
+      <h1 hidden>D2 media</h1>
+      <section class="scrolling-text-container">
+        <div class="scrolling-text-inner" 
+             role="marquee">
+          <div class="scrolling-text">
+            <p class="scrolling-text-item running-line-text">Эффективные идеи</p>
+            <div class="scrolling-text-item running-line-accent">С 2010 г.</div>
+            <p class="scrolling-text-item running-line-text">Впечатляющие результаты</p>
+            <div class="scrolling-text-item running-line-accent">Более 100 проектов</div>
+            <p class="scrolling-text-item running-line-text">Комфортный production</p>
+            <div class="scrolling-heart">
+              <svg class="heart"
+                   width="150" 
+                   height="150" 
+                   viewBox="0 0 500 500">
+                <use href="./svg/heart.svg#heart"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="scrolling-text">
+            <p class="scrolling-text-item running-line-text">Эффективные идеи</p>
+            <div class="scrolling-text-item running-line-accent">С 2010 г.</div>
+            <p class="scrolling-text-item running-line-text">Впечатляющие результаты</p>
+            <div class="scrolling-text-item running-line-accent">Более 100 проектов</div>
+            <p class="scrolling-text-item running-line-text">Комфортный production</p>
+            <div class="scrolling-heart">
+              <svg class="heart"
+                   width="150" 
+                   height="150" 
+                   viewBox="0 0 500 500">
+                <use href="./svg/heart.svg#heart"></use>
+              </svg>
+            </div>
+          </div>
         </div>
       </section>
-      <section class="section section__portfolio">
-        <h2 class="section__title">Portfolio</h2>
-        <div class="slider">
-          <div class="slider-line">
-                <img
-                  class="img"
-                  src="./images/logos.png"
-                  alt="..."
-                  loading="lazy"/>
-                <img
-                  class="img"
-                  src="./images/bridge_tv.png"
-                  alt="..."
-                  loading="lazy"/>
-                <img
-                  class="img"
-                  src="./images/finanses.png"
-                  alt="..."
-                  loading="lazy"/>
-                <img
-                  class="img"
-                  src="./images/rumia.png"
-                  alt="..."
-                  loading="lazy"/>
-                <img
-                  class="img"
-                  src="./images/drugs.png"
-                  alt="..."
-                  loading="lazy"/>
-                <img
-                  class="img"
-                  src="./images/gorki11.png"
-                  alt="..."
-                  loading="lazy"/>
-                <img
-                  class="img"
-                  src="./images/invite.png"
-                  alt="..."
-                  loading="lazy"/>
-                <img
-                  class="img"
-                  src="./images/hotel.png"
-                  alt="..."
-                  loading="lazy"/>
-                <img
-                  class="img"
-                  src="./images/mmc.png"
-                  alt="..."
-                  loading="lazy"/>
-                <img
-                  class="img"
-                  src="./images/oxytelecom.png"
-                  alt="..."
-                  loading="lazy"/>
-                <img
-                  class="img"
-                  src="./images/espanol.png"
-                  alt="..."
-                  loading="lazy"/>
-                <img
-                  class="img"
-                  src="./images/kai_metov.png"
-                  alt="..."
-                  loading="lazy"/>
-                <img
-                  class="img"
-                  src="./images/invite2.png"
-                  alt="..."
-                  loading="lazy"/>
-                <img
-                  class="img"
-                  src="./images/haier.png"
-                  alt="..."
-                  loading="lazy"/>
-                <img
-                  class="img"
-                  src="./images/tehnosila.png"
-                  alt="..."
-                  loading="lazy"/>
-                <img
-                  class="img"
-                  src="./images/runstroy.png"
-                  alt="..."
-                  loading="lazy"/>
-                <img
-                  class="img"
-                  src="./images/expressline.png"
-                  alt="..."
-                  loading="lazy"/>
-                <img
-                  class="img"
-                  src="./images/drugs2.png"
-                  alt="..."
-                  loading="lazy"/>
-                <img
-                  class="img"
-                  src="./images/alenka.png"
-                  alt="..."
-                  loading="lazy"/>
-                <img
-                  class="img"
-                  src="./images/all_in_one.png"
-                  alt="..."
-                  loading="lazy"/>
-                <img
-                  class="img"
-                  src="./images/bridge_tv_2.png"
-                  alt="..."
-                  loading="lazy"/>
-        </div>
-        <button class="slider-prev" type="button" aria-label="Посмотреть ущё">&lt;</button>
-	      <button class="slider-next">&gt;</button>
-      </div>
+      <section class="section">
+        <h3 class="section__slogan">Брендинг, Дизайн,<br>Digital-проекты</h3>
+        <a class="section__portfolio">
+          <h3 class="section__portfolio-text">Portfolio</h3>
+        </a>
       </section>
     </main>
-    <footer class="footer">
-      <address class="footer__address">
-        <a class="footer__address_link" href="tel:+99995555555">+9 999 555 5555</a>
-        <a class="footer__address_link" href="mailto:info@sobaka.ge">info@sobaka.ge</a>
-      </address>
-      <div>ссылки на соцсети?</div>
-    </footer>
-    <dialog id="dialog-id" class="dialog">
-      <button
-          class="dialog__close-button"
-          type="button"
-          onclick="window['dialog-id'].close();">
-      X</button>
-      <img
-        class="portfolio__card-list-item_img"
-        src="./images/smile.webp"
-        alt="..."
-        loading="lazy"/>
-    </dialog>
-    <script src="./scripts/set-theme.js"></script>
-    <script src="scripts/slider.js"></script>
-     
+    <script src="./scripts/set-theme.js"></script> 
   </body>
 </html>
