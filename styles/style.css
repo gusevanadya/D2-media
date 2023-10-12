@@ -16,9 +16,10 @@
   display: grid;
   grid-template-columns: 0.5fr 2fr 0.5fr;
   gap: 10px;
-  padding: 15px;
+  padding: 30px;
   border-radius: 10px;
   align-items: center;
+  justify-content: center;
 }
 
 .header__logo {
@@ -27,7 +28,6 @@
   inline-size: 200px;
   align-items: flex-end;
   gap: 5px;
-  margin-inline-start: 20px;
 }
 
 .header__logo-d2 {
@@ -52,6 +52,7 @@
   font-style: normal;
   text-decoration: none;
   block-size: 25px;
+  align-self: center;
   margin-inline-end: 10px;
   position: relative;
   margin-inline-start: 15px;
@@ -89,6 +90,11 @@
   margin-inline-start: 60px;
 }
 
+.icon-link {
+  display: flex;
+  justify-content: center;
+}
+
 .icon {
   color: var(--text-color);
   inline-size: 40px;
@@ -100,7 +106,6 @@
 
 .header__theme-menu{
   justify-self: flex-end;
-  margin-inline-end: 10px;
 }
 
 .theme-menu__list {
@@ -149,6 +154,7 @@
 }
 
 .scrolling-text-container {
+  cursor: default;
   margin: 150px 0 80px;
   block-size: 150px;
   overflow: hidden;
@@ -171,9 +177,6 @@
   animation: marquee_motion 20s linear infinite;
 }
 
-.scrolling-text-container:hover .scrolling-text-inner>div {
-  animation-play-state: paused;
-}
 
 .running-line-text {
   font-size: 120px;
@@ -217,16 +220,19 @@
   font-family: var(--font-family);
   font-weight: var(--titlefont-weight);
   font-size: 60px;
+  cursor: default;
+  inline-size: 40%;
 }
 
 .section__portfolio {
   background-color: var( --accent-color);
-  inline-size: 500px;
+  inline-size: 50%;
   block-size: 400px;
   border-radius: 20px;
   padding: 30px 40px;
   display: flex;
   align-items: flex-end;
+  text-decoration: none;
 }
 
 .section__portfolio:hover {
@@ -234,6 +240,10 @@
   outline: 2px solid var(--text-color);
   transition: all ease 0.3s;
   cursor: pointer;
+}
+
+.section__portfolio:visited {
+  text-decoration: none;
 }
 
 .section__portfolio-text {
